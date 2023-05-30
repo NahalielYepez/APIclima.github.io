@@ -14,10 +14,10 @@ const Card = ({
 }) => (
   <div className="card">
     <h3>{`${city}`}</h3>
-    <p>Temperature: {temperature}°C</p>
-    <p>Wind Speed: {windSpeed} km/h</p>
-    <p>Humidity: {humidity}%</p>
-    <p>Precipitation: {precipitation} mm</p>
+    <p>Temperatura: {temperature}°C</p>
+    <p>Viento: {windSpeed} km/h</p>
+    <p>Humedad: {humidity}%</p>
+    <p>Precipitación: {precipitation} mm</p>
     <button className="remove-button" onClick={onRemove}>
       Eliminar
     </button>
