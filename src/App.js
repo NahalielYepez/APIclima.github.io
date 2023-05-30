@@ -10,7 +10,7 @@ const Card = ({
   windSpeed,
   humidity,
   precipitation,
-  onRemove
+  onRemove,
 }) => (
   <div className="card">
     <h3>{`${city}`}</h3>
@@ -37,14 +37,14 @@ const App = () => {
         temp_c: temperature,
         wind_kph: windSpeed,
         humidity,
-        precip_mm: precipitation
+        precip_mm: precipitation,
       } = response.data.current;
       const newCard = {
         city: cityInput,
         temperature,
         windSpeed,
         humidity,
-        precipitation
+        precipitation,
       };
       setCards([...cards, newCard]);
       setCityInput("");
