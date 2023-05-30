@@ -10,14 +10,14 @@ const Card = ({
   windSpeed,
   humidity,
   precipitation,
-  onRemove
+  onRemove,
 }) => (
   <div className="card">
     <h3>{`${city}`}</h3>
-    <p>Temperature: {temperature}°C</p>
-    <p>Wind Speed: {windSpeed} km/h</p>
-    <p>Humidity: {humidity}%</p>
-    <p>Precipitation: {precipitation} mm</p>
+    <p>Temperatura: {temperature}°C</p>
+    <p>Viento: {windSpeed} km/h</p>
+    <p>Humedad: {humidity}%</p>
+    <p>Precipitación: {precipitation} mm</p>
     <button className="remove-button" onClick={onRemove}>
       Eliminar
     </button>
@@ -37,14 +37,14 @@ const App = () => {
         temp_c: temperature,
         wind_kph: windSpeed,
         humidity,
-        precip_mm: precipitation
+        precip_mm: precipitation,
       } = response.data.current;
       const newCard = {
         city: cityInput,
         temperature,
         windSpeed,
         humidity,
-        precipitation
+        precipitation,
       };
       setCards([...cards, newCard]);
       setCityInput("");
